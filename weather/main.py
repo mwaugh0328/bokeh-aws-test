@@ -9,6 +9,7 @@ from bokeh.layouts import column, row
 from bokeh.models import ColumnDataSource, DataRange1d, Select
 from bokeh.palettes import Blues4
 from bokeh.plotting import figure
+from bokeh.embed import server_document
 
 STATISTICS = ['record_min_temp', 'actual_min_temp', 'average_min_temp', 'average_max_temp', 'actual_max_temp', 'record_max_temp']
 
@@ -87,3 +88,6 @@ controls = column(city_select, distribution_select)
 
 curdoc().add_root(row(plot, controls))
 curdoc().title = "Weather"
+
+
+script = server_document()
