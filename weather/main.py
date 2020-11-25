@@ -91,3 +91,4 @@ curdoc().title = "Weather"
 
 
 script = server_document()
+print(script)
